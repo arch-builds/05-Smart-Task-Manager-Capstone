@@ -1,20 +1,20 @@
 # Smart Task Manager Capstone Requirements Checklist
 
 ## 1. User Management
-- [ ] Register user
-- [ ] Login
-- [ ] Logout
-- [ ] View/edit profile
-- [ ] Change name, email, password
-- [ ] Passwords stored securely
-- [ ] Users can only access their own tasks
+- [x] Register user
+- [x] Login
+- [x] Logout
+- [x] View/edit profile
+- [x] Change name, email, password
+- [x] Passwords stored securely
+- [x] Users can only access their own tasks
 
 ## 2. Task Management
-- [ ] Create task
-- [ ] View tasks
-- [ ] Edit task
-- [ ] Delete task
-- [ ] Task fields:
+- [x] Create task
+- [x] View tasks
+- [x] Edit task
+- [x] Delete task
+- [x] Task fields:
   - Title
   - Description
   - Category
@@ -23,57 +23,57 @@
   - Status: Pending / In Progress / Completed
 
 ## 3. Search, Filters & Dashboard
-- [ ] Search by task title
-- [ ] Filter by category
-- [ ] Filter by priority
-- [ ] Filter by status
-- [ ] Total task count
-- [ ] Completed task count
-- [ ] Pending task count
-- [ ] Overdue task count
-- [ ] Category distribution
+- [x] Search by task title
+- [x] Filter by category
+- [x] Filter by priority
+- [x] Filter by status
+- [x] Total task count
+- [x] Completed task count
+- [x] Pending task count
+- [x] Overdue task count
+- [x] Category distribution
 
 ## 4. Technical Requirements
-- [ ] Frontend: HTML, CSS, JavaScript
-- [ ] Backend: Node.js + Express
-- [ ] REST API
-- [ ] SQLite database
-- [ ] Parameterized SQL queries
-- [ ] Foreign keys
-- [ ] Database index
-- [ ] Password hashing
-- [ ] Local secrets excluded from GitHub
-- [ ] `.env` used for local configuration
-- [ ] Automated tests
-- [ ] GitHub Actions CI
+- [x] Frontend: HTML, CSS, JavaScript
+- [x] Backend: Node.js + Express
+- [x] REST API
+- [x] SQLite database
+- [x] Parameterized SQL queries
+- [x] Foreign keys
+- [x] Database index
+- [x] Password hashing
+- [x] Local secrets excluded from GitHub
+- [x] `.env` used for local configuration
+- [x] Automated tests
+- [x] GitHub Actions CI
 
 ## 5. Required API Endpoints
-- [ ] POST `/api/users/register`
-- [ ] POST `/api/users/login`
-- [ ] GET `/api/tasks`
-- [ ] POST `/api/tasks`
-- [ ] PUT `/api/tasks/:id`
-- [ ] DELETE `/api/tasks/:id`
+- [x] POST `/api/users/register`
+- [x] POST `/api/users/login`
+- [x] GET `/api/tasks`
+- [x] POST `/api/tasks`
+- [x] PUT `/api/tasks/:id`
+- [x] DELETE `/api/tasks/:id`
 
 ## 6. Required Submission Artifacts
-- [ ] GitHub repository
-- [ ] Main + dev branch history
-- [ ] `schema.sql`
-- [ ] ER diagram
-- [ ] AI Prompt Engineering Log with minimum 10 entries
-- [ ] `.github/workflows/ci.yml`
-- [ ] Green CI screenshot
-- [ ] Comprehensive `README.md`
+- [x] GitHub repository
+- [x] Main + dev branch history
+- [x] `schema.sql`
+- [x] ER diagram
+- [x] AI Prompt Engineering Log with minimum 10 entries
+- [x] `.github/workflows/ci.yml`
+- [x] Green CI screenshot
+- [x] Comprehensive `README.md`
 
 ## 7. Functional Evidence To Capture
-- [ ] Registration
-- [ ] Login
-- [ ] Logout/profile
-- [ ] Create task
-- [ ] Edit task
-- [ ] Delete task
-- [ ] Search/filter
-- [ ] Dashboard metrics
-- [ ] User isolation
-- [ ] Automated tests passing
-- [ ] CI passing
+- [x] Registration
+- [x] Login
+- [x] Logout/profile
+- [x] Create task
+- [x] Edit task
+- [x] Delete task
+- [x] Search/filter
+- [x] Dashboard metrics
+- [x] User isolation
+- [x] Automated tests passing
+- [x] CI passing
