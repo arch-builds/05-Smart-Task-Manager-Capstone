@@ -1,0 +1,21 @@
+{
+    "name": "smart-task-manager-capstone",
+    "version": "1.0.0",
+    "description": "AI-assisted full-stack Smart Task Manager capstone project",
+    "main": "backend/server.js",
+    "scripts": {
+        "start": "node backend/server.js",
+        "test": "jest --runInBand"
+    },
+    "dependencies": {
+        "bcrypt": "^6.0.0",
+        "dotenv": "^18.0.7",
+        "express": "^5.3.0",
+        "express-session": "^1.19.0",
+        "sqlite3": "^6.0.1"
+    },
+    "devDependencies": {
+        "jest": "^30.5.2",
+        "supertest": "^7.3.1"
+    }
+}

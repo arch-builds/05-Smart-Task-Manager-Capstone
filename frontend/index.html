@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div>
+            <h1>Smart Task Manager</h1>
+            <p>Organize, track, and manage your work in one place.</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- AUTHENTICATION -->
+        <section id="authSection">
+            <div class="auth-grid">
+
+                <div class="card">
+                    <h2>Login</h2>
+
+                    <form id="loginForm">
+                        <label>
+                            Email
+                            <input id="loginEmail" type="email" required autocomplete="email">
+                        </label>
+
+                        <label>
+                            Password
+                            <input id="loginPassword" type="password" required autocomplete="current-password">
+                        </label>
+
+                        <button type="submit">Login</button>
+                    </form>
+
+                    <p id="loginMessage" class="message"></p>
+                </div>
+
+                <div class="card">
+                    <h2>Create Account</h2>
+
+                    <form id="registerForm">
+                        <label>
+                            Name
+                            <input id="registerName" type="text" required>
+                        </label>
+
+                        <label>
+                            Email
+                            <input id="registerEmail" type="email" required>
+                        </label>
+
+                        <label>
+                            Password
+                            <input id="registerPassword" type="password" required>
+                        </label>
+
+                        <button type="submit">Register</button>
+                    </form>
+
+                    <p id="registerMessage" class="message"></p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- APPLICATION -->
+        <section id="appSection" class="hidden">
+
+            <div class="app-toolbar">
+                <div>
+                    <strong id="welcomeUser">Welcome</strong>
+                </div>
+
+                <button id="logoutButton" class="secondary-button">
+                    Logout
+                </button>
+            </div>
+
+
+            <!-- DASHBOARD -->
+            <section>
+                <h2>Dashboard</h2>
+
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <span id="metricTotal">0</span>
+                        <small>Total Tasks</small>
+                    </div>
+
+                    <div class="metric-card">
+                        <span id="metricCompleted">0</span>
+                        <small>Completed</small>
+                    </div>
+
+                    <div class="metric-card">
+                        <span id="metricPending">0</span>
+                        <small>Pending</small>
+                    </div>
+
+                    <div class="metric-card">
+                        <span id="metricProgress">0</span>
+                        <small>In Progress</small>
+                    </div>
+
+                    <div class="metric-card">
+                        <span id="metricOverdue">0</span>
+                        <small>Overdue</small>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Category Distribution</h3>
+                    <div id="categoryDistribution">No task data yet.</div>
+                </div>
+            </section>
+
+
+            <!-- TASK FORM -->
+            <section class="card">
+                <h2 id="taskFormTitle">Add Task</h2>
+
+                <form id="taskForm">
+                    <label>
+                        Title
+                        <input id="taskTitle" type="text" required>
+                    </label>
+
+                    <label>
+                        Description
+                        <textarea id="taskDescription" rows="3"></textarea>
+                    </label>
+
+                    <div class="form-grid">
+                        <label>
+                            Category
+                            <select id="taskCategory">
+                                <option value="Work">Work</option>
+                                <option value="Personal">Personal</option>
+                                <option value="Learning">Learning</option>
+                                <option value="Meetings">Meetings</option>
+                                <option value="Development">Development</option>
+                            </select>
+                        </label>
+
+                        <label>
+                            Priority
+                            <select id="taskPriority">
+                                <option value="High">High</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Low">Low</option>
+                            </select>
+                        </label>
+
+                        <label>
+                            Due Date
+                            <input id="taskDueDate" type="date">
+                        </label>
+
+                        <label>
+                            Status
+                            <select id="taskStatus">
+                                <option value="Pending">Pending</option>
+                                <option value="In Progress">In Progress</option>
+                                <option value="Completed">Completed</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <div class="button-row">
+                        <button type="submit" id="saveTaskButton">
+                            Add Task
+                        </button>
+
+                        <button type="button" id="cancelEditButton" class="secondary-button hidden">
+                            Cancel Edit
+                        </button>
+                    </div>
+                </form>
+
+                <p id="taskMessage" class="message"></p>
+            </section>
+
+
+            <!-- SEARCH AND FILTER -->
+            <section class="card">
+                <h2>Search & Filter</h2>
+
+                <div class="filter-grid">
+                    <input id="searchInput" type="search" placeholder="Search task title">
+
+                    <select id="categoryFilter">
+                        <option value="">All Categories</option>
+                        <option value="Work">Work</option>
+                        <option value="Personal">Personal</option>
+                        <option value="Learning">Learning</option>
+                        <option value="Meetings">Meetings</option>
+                        <option value="Development">Development</option>
+                    </select>
+
+                    <select id="priorityFilter">
+                        <option value="">All Priorities</option>
+                        <option value="High">High</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Low">Low</option>
+                    </select>
+
+                    <select id="statusFilter">
+                        <option value="">All Statuses</option>
+                        <option value="Pending">Pending</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Completed">Completed</option>
+                    </select>
+
+                    <button id="applyFiltersButton">Apply</button>
+
+                    <button id="clearFiltersButton" class="secondary-button">
+                        Clear
+                    </button>
+                </div>
+            </section>
+
+
+            <!-- TASK LIST -->
+            <section>
+                <h2>Tasks</h2>
+                <div id="taskList" class="task-list"></div>
+            </section>
+
+
+            <!-- PROFILE -->
+            <section class="card">
+                <h2>Profile</h2>
+
+                <form id="profileForm">
+
+                    <label>
+                        Name
+                        <input id="profileName" type="text" required>
+                    </label>
+
+                    <label>
+                        Email
+                        <input id="profileEmail" type="email" required>
+                    </label>
+
+                    <label>
+                        New Password
+                        <input id="profilePassword" type="password" placeholder="Leave blank to keep current password">
+                    </label>
+
+                    <button type="submit">Update Profile</button>
+                </form>
+
+                <p id="profileMessage" class="message"></p>
+            </section>
+
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
